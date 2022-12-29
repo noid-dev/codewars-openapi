@@ -9,10 +9,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
 
-      - name: Setup NPM
+      - name: Setup Node.js
         uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516
         with:
           node-version: 18
 
-      - name: Validate OpenAPI Spec
+      - name: Validate OpenAPI
         run: npx @redocly/cli lint openapi.yaml
