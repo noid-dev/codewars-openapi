@@ -1,0 +1,19 @@
+name: Validate OAS
+
+on: [ push ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+
+      - name: Setup NPM
+        uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516
+        with:
+          node-version: 18
+          cache: npm
+
+      - name: Validate OpenAPI Spec
+        run: npx @redocly/cli lint openapi.yaml
