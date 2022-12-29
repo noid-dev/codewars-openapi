@@ -5,6 +5,9 @@ info:
   version: 1.0.0
   license:
     name: MIT
+    url: https://github.com/noid-dev/codewars-openapi/blob/main/LICENSE.md
+  contact:
+    url: https://github.com/noid-dev/codewars-openapi
 
 servers:
   - url: https://www.codewars.com
