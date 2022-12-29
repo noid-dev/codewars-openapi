@@ -7,6 +7,8 @@ info:
 servers:
   - url: https://www.codewars.com
 
+security: [ ]
+
 paths:
   /api/v1/users/{user}:
     get:
@@ -393,9 +395,9 @@ components:
               name: 4 kyu
               color: blue
               score: 870
-          codeChallenges:
-            totalAuthored: 3
-            totalCompleted: 230
+        codeChallenges:
+          totalAuthored: 3
+          totalCompleted: 230
 
     CompletedChallengesExample:
       value:
