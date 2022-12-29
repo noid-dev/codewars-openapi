@@ -3,6 +3,8 @@ info:
   title: Codewars API
   description: Codewars API documentation - [https://dev.codewars.com](https://dev.codewars.com)
   version: 1.0.0
+  license:
+    name: MIT
 
 servers:
   - url: https://www.codewars.com
