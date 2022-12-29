@@ -30,6 +30,15 @@ paths:
               examples:
                 success:
                   $ref: '#/components/examples/UserExample'
+        404:
+          description: The specified resource could not be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                error:
+                  $ref: '#/components/examples/ErrorExample'
 
   /api/v1/users/{user}/code-challenges/completed:
     get:
@@ -50,6 +59,15 @@ paths:
               examples:
                 success:
                   $ref: '#/components/examples/CompletedChallengesExample'
+        404:
+          description: The specified resource could not be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                error:
+                  $ref: '#/components/examples/ErrorExample'
 
   /api/v1/users/{user}/code-challenges/authored:
     get:
@@ -69,6 +87,15 @@ paths:
               examples:
                 success:
                   $ref: '#/components/examples/AuthoredChallengesExample'
+        404:
+          description: The specified resource could not be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                error:
+                  $ref: '#/components/examples/ErrorExample'
 
   /api/v1/code-challenges/{challenge}:
     get:
@@ -88,6 +115,15 @@ paths:
               examples:
                 success:
                   $ref: '#/components/examples/CodeChallengeExample'
+        404:
+          description: The specified resource could not be found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                error:
+                  $ref: '#/components/examples/ErrorExample'
 
 components:
   parameters:
@@ -358,6 +394,13 @@ components:
           type: integer
           description: The total score earned. This is the number that determines the rank.
 
+    Error:
+      properties:
+        success:
+          type: boolean
+        reason:
+          type: string
+
   examples:
     UserExample:
       value:
@@ -495,3 +538,8 @@ components:
         unresolved:
           issues: 1
           suggestions: 0
+
+    ErrorExample:
+      value:
+        success: false
+        reason: some error
