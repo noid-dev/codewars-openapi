@@ -14,14 +14,11 @@ jobs:
         with:
           node-version: 18
 
-      - name: Bundle OAS
+      - name: Bundle OpenAPI definitions
         run: npx @redocly/cli@1.0.0-beta.118 bundle openapi/openapi.yaml --output=dist/codewars.yaml
 
-      - name: Stats OAS
-        run: npx @redocly/cli@1.0.0-beta.118 stats dist/codewars.yaml --format=json > dist/metadata.json
-
-      - name: Lint OAS
-        run: npx @redocly/cli@1.0.0-beta.118 lint dist/codewars.yaml --format=json > dist/report.json
+      - name: Lint OpenAPI definitions
+        run: npx @redocly/cli@1.0.0-beta.118 lint dist/codewars.yaml >> $GITHUB_STEP_SUMMARY
 
       - name: Upload artifacts
         uses: actions/upload-artifact@83fd05a356d7e2593de66fc9913b3002723633cb
