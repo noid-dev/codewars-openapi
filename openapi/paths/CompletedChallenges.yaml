@@ -1,0 +1,27 @@
+get:
+  summary: List challenges completed by the user.
+  operationId: listCompletedChallenges
+  tags:
+    - Users
+  parameters:
+    - $ref: ../components/parameters/UserParam.yaml
+    - $ref: ../components/parameters/PageParam.yaml
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/CompletedChallenges.yaml
+          examples:
+            success:
+              $ref: ../components/examples/CompletedChallengesExample.yaml
+    404:
+      description: The specified resource could not be found
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Error.yaml
+          examples:
+            error:
+              $ref: ../components/examples/ErrorExample.yaml

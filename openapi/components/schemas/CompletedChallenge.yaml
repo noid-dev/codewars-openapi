@@ -1,0 +1,19 @@
+type: object
+properties:
+  id:
+    type: string
+    description: ID of the kata.
+  name:
+    type: string
+    description: Name of the kata.
+  slug:
+    type: string
+    description: Slug of the kata.
+  completedAt:
+    type: string
+    description: Date and time of the completion.
+  completedLanguages:
+    type: array
+    description: Array of languages a user completed in.
+    items:
+      type: string

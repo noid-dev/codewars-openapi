@@ -1,0 +1,8 @@
+type: object
+properties:
+  success:
+    type: boolean
+    description: Operation outcome.
+  reason:
+    type: string
+    description: Reason for the outcome.

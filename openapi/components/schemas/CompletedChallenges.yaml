@@ -1,0 +1,13 @@
+type: object
+properties:
+  totalPages:
+    type: integer
+    description: Total number of pages.
+  totalItems:
+    type: integer
+    description: Total number of completed challenges.
+  data:
+    type: array
+    description: Arrays of completed challenges.
+    items:
+      $ref: './CompletedChallenge.yaml'

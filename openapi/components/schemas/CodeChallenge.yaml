@@ -1,0 +1,99 @@
+type: object
+properties:
+  id:
+    type: string
+    description: ID of the kata.
+  name:
+    type: string
+    description: Name of the kata.
+  slug:
+    type: string
+    description: Slug of the kata.
+  url:
+    type: string
+    description: URL of the kata.
+  category:
+    type: string
+    description: Category of the kata.
+  description:
+    type: string
+    description: Description of the kata in Markdown.
+  tags:
+    type: array
+    description: Array of tags associated with the kata.
+    items:
+      type: string
+  languages:
+    type: array
+    description: Array of language names the kata is available in.
+    items:
+      type: string
+  rank:
+    type: object
+    description: Object describing the rank of the kata if approved.
+    nullable: true
+    properties:
+      id:
+        type: integer
+        description: Rank in integer. [-8, -1] maps to kyu, [1, 8] maps to dan.
+      name:
+        type: string
+        description: Either {-rank} kyu or {rank} dan.
+      color:
+        type: string
+        description: The color of the rank. Possible colors are white (7-8 kyu), yellow (5-6 kyu), blue (3-4 kyu), purple (1-2 kyu), black (1-4 dan), and red (5-8 dan).
+  createdBy:
+    type: object
+    description: The author of the kata.
+    properties:
+      username:
+        type: string
+        description: Username of the user.
+      url:
+        type: string
+        description: URL of the user's profile.
+  createdAt:
+    type: string
+    description: Date and time when the kata was created.
+  publishedAt:
+    type: string
+    description: Date and time when the kata was first published.
+  approvedBy:
+    type: object
+    description: The approver of the kata.
+    nullable: true
+    properties:
+      username:
+        type: string
+        description: Username of the user.
+      url:
+        type: string
+        description: URL of the user's profile.
+  approvedAt:
+    type: string
+    description: Date and time when the kata was approved.
+  totalCompleted:
+    type: integer
+    description: Total number of completions.
+  totalAttempts:
+    type: integer
+    description: Total number of attempts.
+  totalStars:
+    type: integer
+    description: The number of bookmarks.
+  voteScore:
+    type: integer
+    description: The sum of all votes casted.
+  contributorsWanted:
+    type: boolean
+    description: Whether to allow contributions.
+  unresolved:
+    type: object
+    description: Object with fields issues and suggestions.
+    properties:
+      issues:
+        type: integer
+        description: The number of unresolved issues.
+      suggestions:
+        type: integer
+        description: The number of suggestions.

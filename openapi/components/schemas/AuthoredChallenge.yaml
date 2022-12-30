@@ -1,0 +1,29 @@
+type: object
+properties:
+  id:
+    type: string
+    description: ID of the kata.
+  name:
+    type: string
+    description: Name of the kata.
+  description:
+    type: string
+    description: Description of the kata in Markdown.
+  rank:
+    type: integer
+    description: Rank of the kata if approved.
+    nullable: true
+  rankName:
+    type: string
+    description: Rank name of the kata if approved.
+    nullable: true
+  tags:
+    type: array
+    description: Array of tags associated with the kata.
+    items:
+      type: string
+  languages:
+    type: array
+    description: Array of language names the kata is available in.
+    items:
+      type: string

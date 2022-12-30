@@ -1,0 +1,28 @@
+get:
+  summary: Returns user information.
+  operationId: getUser
+  description: |
+    Some description here
+  tags:
+    - Users
+  parameters:
+    - $ref: ../components/parameters/UserParam.yaml
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/User.yaml
+          examples:
+            success:
+              $ref: ../components/examples/UserExample.yaml
+    404:
+      description: The specified resource could not be found
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Error.yaml
+          examples:
+            error:
+              $ref: ../components/examples/ErrorExample.yaml

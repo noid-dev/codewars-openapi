@@ -1,0 +1,26 @@
+get:
+  summary: Return code challenge information.
+  operationId: getCodeChallenge
+  tags:
+    - Code Challenges
+  parameters:
+    - $ref: ../components/parameters/ChallengeParam.yaml
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/CodeChallenge.yaml
+          examples:
+            success:
+              $ref: ../components/examples/CodeChallengeExample.yaml
+    404:
+      description: The specified resource could not be found
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Error.yaml
+          examples:
+            error:
+              $ref: ../components/examples/ErrorExample.yaml

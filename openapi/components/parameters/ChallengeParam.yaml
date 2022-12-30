@@ -1,0 +1,6 @@
+name: challenge
+in: path
+required: true
+description: ID or slug.
+schema:
+  type: string

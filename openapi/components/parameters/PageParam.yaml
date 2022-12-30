@@ -1,0 +1,6 @@
+name: page
+in: query
+description: The page offset. Each page contains at most 200 items.
+schema:
+  type: integer
+  default: 0

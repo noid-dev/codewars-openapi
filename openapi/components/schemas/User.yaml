@@ -1,0 +1,47 @@
+type: object
+properties:
+  id:
+    type: string
+    description: ID of the user.
+  username:
+    type: string
+    description: Username of the user.
+  name:
+    type: string
+    description: Name of the user.
+  honor:
+    type: integer
+    description: Total honor points earned by the user.
+  clan:
+    type: string
+    description: Name of the clan.
+  leaderboardPosition:
+    type: integer
+    description: The user's position on the overall leaderboard.
+    nullable: true
+  skills:
+    type: array
+    description: Array of skills entered by the user.
+    items:
+      type: string
+  ranks:
+    type: object
+    description: Ranks object with overall and language ranks.
+    properties:
+      overall:
+        $ref: Rank.yaml
+      languages:
+        type: object
+        description: Ranks for each language trained.
+        additionalProperties:
+          $ref: Rank.yaml
+  codeChallenges:
+    type: object
+    description: Object with fields totalAuthored and totalCompleted for the number of authored and completed kata respectively.
+    properties:
+      totalAuthored:
+        type: integer
+        description: The total number of authored kata.
+      totalCompleted:
+        type: integer
+        description: The total number of completed kata.

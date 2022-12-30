@@ -1,0 +1,41 @@
+value:
+  data:
+    - id: 5571d9fc11526780a000011a
+      name: The builder of things
+      description: For this kata you will be using some meta-programming ...
+      rank: -3
+      rankName: 3 kyu
+      tags:
+        - Algorithms
+        - Metaprogramming
+        - Programming Paradigms
+        - Advanced Language Features
+        - Fundamentals
+        - Domain Specific Languages
+        - Declarative Programming
+      languages:
+        - ruby
+        - javascript
+        - python
+        - coffeescript
+    - id: 51ba717bb08c1cd60f00002f
+      name: Range Extraction
+      description: A format for expressing an ordered list of integers ...
+      rank: -4
+      rankName: 4 kyu
+      tags:
+        - Algorithms
+        - String Formatting
+        - Formatting
+        - Logic
+        - Strings
+      languages:
+        - javascript
+        - coffeescript
+        - ruby
+        - go
+        - python
+        - java
+        - haskell
+        - csharp
+        - cpp

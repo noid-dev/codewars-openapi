@@ -1,0 +1,26 @@
+get:
+  summary: List challenges authored by the user.
+  operationId: listAuthoredChallenges
+  tags:
+    - Users
+  parameters:
+    - $ref: ../components/parameters/UserParam.yaml
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/AuthoredChallenges.yaml
+          examples:
+            success:
+              $ref: ../components/examples/AuthoredChallengesExample.yaml
+    404:
+      description: The specified resource could not be found
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Error.yaml
+          examples:
+            error:
+              $ref: ../components/examples/ErrorExample.yaml

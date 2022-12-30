@@ -1,0 +1,12 @@
+value:
+  totalPages: 1
+  totalItems: 1
+  data:
+    - id: 514b92a657cdc65150000006
+      name: Multiples of 3 and 5
+      slug: multiples-of-3-and-5
+      completedAt: 2017-04-06T16:32:09.388Z
+      completedLanguages:
+        - javascript
+        - coffeescript
+        - ruby
