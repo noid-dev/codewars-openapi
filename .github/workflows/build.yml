@@ -23,7 +23,7 @@ jobs:
           name: codewars-openapi
           path: codewars.yaml
 
-  test:
+  scan:
     needs: build
     runs-on: ubuntu-22.04
     steps:
@@ -31,4 +31,4 @@ jobs:
         uses: actions/download-artifact@9782bd6a9848b53b110e712e20e42d89988822b7
 
       - name: Lint OpenAPI definitions
-        run: npx @redocly/cli@1.0.0-beta.118 lint codewars.yaml >> $GITHUB_STEP_SUMMARY 2>&1
+        run: npx @redocly/cli@1.0.0-beta.118 lint codewars.yaml
