@@ -10,9 +10,7 @@ info:
   description: Codewars API documentation - [https://dev.codewars.com](https://dev.codewars.com)
 servers:
   - url: https://www.codewars.com
-
 security: [ ]
-
 paths:
   /api/v1/users/{user}:
     $ref: ./paths/Users.yaml

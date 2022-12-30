@@ -1,0 +1,8 @@
+description: We had a problem with our server. Try again later.
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/Error.yaml
+    examples:
+      error:
+        $ref: ../examples/ErrorExample.yaml

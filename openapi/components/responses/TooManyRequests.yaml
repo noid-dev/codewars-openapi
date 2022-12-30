@@ -1,0 +1,8 @@
+description: You're making too many API requests.
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/Error.yaml
+    examples:
+      error:
+        $ref: ../examples/ErrorExample.yaml

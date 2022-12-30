@@ -17,12 +17,19 @@ get:
           examples:
             success:
               $ref: ../components/examples/UserExample.yaml
+    400:
+      $ref: ../components/responses/BadRequest.yaml
+    403:
+      $ref: ../components/responses/Forbidden.yaml
     404:
-      description: The specified resource could not be found
-      content:
-        application/json:
-          schema:
-            $ref: ../components/schemas/Error.yaml
-          examples:
-            error:
-              $ref: ../components/examples/ErrorExample.yaml
+      $ref: ../components/responses/NotFound.yaml
+    405:
+      $ref: ../components/responses/MethodNotAllowed.yaml
+    406:
+      $ref: ../components/responses/NotAcceptable.yaml
+    429:
+      $ref: ../components/responses/TooManyRequests.yaml
+    500:
+      $ref: ../components/responses/InternalServerError.yaml
+    503:
+      $ref: ../components/responses/ServiceUnavailable.yaml

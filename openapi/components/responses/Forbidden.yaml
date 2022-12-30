@@ -1,0 +1,8 @@
+description: You do not have permission to access this resource.
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/Error.yaml
+    examples:
+      error:
+        $ref: ../examples/ErrorExample.yaml

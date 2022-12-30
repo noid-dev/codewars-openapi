@@ -1,0 +1,8 @@
+description: You requested a format that isn't JSON.
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/Error.yaml
+    examples:
+      error:
+        $ref: ../examples/ErrorExample.yaml

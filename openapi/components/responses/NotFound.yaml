@@ -1,0 +1,8 @@
+description: The specified resource could not be found
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/Error.yaml
+    examples:
+      error:
+        $ref: ../examples/ErrorExample.yaml
