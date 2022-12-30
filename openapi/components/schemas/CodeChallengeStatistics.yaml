@@ -1,0 +1,9 @@
+type: object
+description: Object with fields issues and suggestions.
+properties:
+  issues:
+    type: integer
+    description: The number of unresolved issues.
+  suggestions:
+    type: integer
+    description: The number of suggestions.

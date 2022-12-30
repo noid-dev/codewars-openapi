@@ -1,0 +1,11 @@
+type: object
+description: |
+  Object with fields totalAuthored and totalCompleted for the number 
+  of authored and completed kata respectively.
+properties:
+  totalAuthored:
+    type: integer
+    description: The total number of authored kata.
+  totalCompleted:
+    type: integer
+    description: The total number of completed kata.

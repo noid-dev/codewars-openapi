@@ -1,0 +1,4 @@
+type: object
+description: Ranks for each language trained.
+additionalProperties:
+  $ref: ./UserRank.yaml

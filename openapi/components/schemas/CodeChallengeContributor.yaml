@@ -1,0 +1,9 @@
+type: object
+description: The author of the kata.
+properties:
+  username:
+    type: string
+    description: Username of the user.
+  url:
+    type: string
+    description: URL of the user's profile.

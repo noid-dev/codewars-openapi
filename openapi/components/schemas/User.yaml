@@ -25,25 +25,6 @@ properties:
     items:
       type: string
   ranks:
-    type: object
-    description: Ranks object with overall and language ranks.
-    properties:
-      overall:
-        $ref: Rank.yaml
-      languages:
-        type: object
-        description: Ranks for each language trained.
-        additionalProperties:
-          $ref: Rank.yaml
+    $ref: ./UserRanks.yaml
   codeChallenges:
-    type: object
-    description: |
-      Object with fields totalAuthored and totalCompleted for the number 
-      of authored and completed kata respectively.
-    properties:
-      totalAuthored:
-        type: integer
-        description: The total number of authored kata.
-      totalCompleted:
-        type: integer
-        description: The total number of completed kata.
+    $ref: ./UserStatistics.yaml

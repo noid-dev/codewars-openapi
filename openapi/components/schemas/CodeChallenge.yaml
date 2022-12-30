@@ -29,31 +29,9 @@ properties:
     items:
       type: string
   rank:
-    type: object
-    description: Object describing the rank of the kata if approved.
-    nullable: true
-    properties:
-      id:
-        type: integer
-        description: Rank in integer. [-8, -1] maps to kyu, [1, 8] maps to dan.
-      name:
-        type: string
-        description: Either {-rank} kyu or {rank} dan.
-      color:
-        type: string
-        description: |
-          The color of the rank. Possible colors are white (7-8 kyu), yellow (5-6 kyu), 
-          blue (3-4 kyu), purple (1-2 kyu), black (1-4 dan), and red (5-8 dan).
+    $ref: ./CodeChallengeRank.yaml
   createdBy:
-    type: object
-    description: The author of the kata.
-    properties:
-      username:
-        type: string
-        description: Username of the user.
-      url:
-        type: string
-        description: URL of the user's profile.
+    $ref: ./CodeChallengeContributor.yaml
   createdAt:
     type: string
     description: Date and time when the kata was created.
@@ -61,16 +39,9 @@ properties:
     type: string
     description: Date and time when the kata was first published.
   approvedBy:
-    type: object
-    description: The approver of the kata.
-    nullable: true
-    properties:
-      username:
-        type: string
-        description: Username of the user.
-      url:
-        type: string
-        description: URL of the user's profile.
+    # nullable: true
+    # description: The approver of the kata.
+    $ref: ./CodeChallengeContributor.yaml
   approvedAt:
     type: string
     description: Date and time when the kata was approved.
@@ -90,12 +61,4 @@ properties:
     type: boolean
     description: Whether to allow contributions.
   unresolved:
-    type: object
-    description: Object with fields issues and suggestions.
-    properties:
-      issues:
-        type: integer
-        description: The number of unresolved issues.
-      suggestions:
-        type: integer
-        description: The number of suggestions.
+    $ref: ./CodeChallengeStatistics.yaml

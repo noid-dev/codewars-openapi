@@ -1,0 +1,7 @@
+type: object
+description: Ranks object with overall and language ranks.
+properties:
+  overall:
+    $ref: ./UserRank.yaml
+  languages:
+    $ref: ./LanguageRank.yaml
