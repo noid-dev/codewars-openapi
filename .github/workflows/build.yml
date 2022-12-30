@@ -30,5 +30,8 @@ jobs:
       - name: Download OAS
         uses: actions/download-artifact@9782bd6a9848b53b110e712e20e42d89988822b7
 
+      - name: Display structure of downloaded files
+        run: ls -R
+
       - name: Lint OpenAPI definitions
         run: npx @redocly/cli@1.0.0-beta.118 lint codewars.yaml
