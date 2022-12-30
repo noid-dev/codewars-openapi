@@ -37,7 +37,9 @@ properties:
           $ref: Rank.yaml
   codeChallenges:
     type: object
-    description: Object with fields totalAuthored and totalCompleted for the number of authored and completed kata respectively.
+    description: |
+      Object with fields totalAuthored and totalCompleted for the number 
+      of authored and completed kata respectively.
     properties:
       totalAuthored:
         type: integer

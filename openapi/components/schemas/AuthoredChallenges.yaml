@@ -3,4 +3,4 @@ properties:
   data:
     type: array
     items:
-      $ref: AuthoredChallenge.yaml
+      $ref: ./AuthoredChallenge.yaml
