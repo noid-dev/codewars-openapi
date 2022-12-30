@@ -1,4 +1,4 @@
-name: Validate OAS
+name: Build OAS
 
 on: [ push ]
 
@@ -14,5 +14,10 @@ jobs:
         with:
           node-version: 18
 
-      - name: Validate OpenAPI
-        run: npx @redocly/cli lint openapi.yaml
+      - name: Bundle OpenAPI definitions
+        run: npx @redocly/cli bundle openapi/openapi.yaml --lint --output dist/openapi.yaml
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@83fd05a356d7e2593de66fc9913b3002723633cb
+        with:
+          path: dist/openapi.yaml
