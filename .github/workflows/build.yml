@@ -29,6 +29,8 @@ jobs:
     steps:
       - name: Download OAS
         uses: actions/download-artifact@9782bd6a9848b53b110e712e20e42d89988822b7
+        with:
+          name: codewars-openapi
 
       - name: Display structure of downloaded files
         run: ls -R
