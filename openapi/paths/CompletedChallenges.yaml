@@ -1,6 +1,9 @@
 get:
   summary: List challenges completed by the user.
   operationId: listCompletedChallenges
+  description: >
+    Returns a list of code challenges completed by the user (200 items per page). 
+    Use the *page* parameter to access items on other pages.
   tags:
     - Users
   parameters:
