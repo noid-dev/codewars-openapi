@@ -6,7 +6,7 @@
 
 
 # Build / generate output
-openapi.yaml
+codewars.yaml
 
 # Dependency directories
 node_modules/
