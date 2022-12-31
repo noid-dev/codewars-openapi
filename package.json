@@ -6,10 +6,9 @@
   "license": "MIT",
   "author": "Paranoid User",
   "scripts": {
-    "build": "redocly bundle openapi/openapi.yaml -o codewars.yaml",
-    "stats": "redocly stats codewars.yaml",
-    "lint": "redocly lint codewars.yaml",
-    "start": "redocly preview-docs codewars.yaml"
+    "build": "redocly bundle openapi/openapi.yaml -o public/codewars.yaml & redocly stats public/codewars.yaml",
+    "test": "redocly lint public/codewars.yaml",
+    "start": "http-server --cors"
   },
   "directories": {
     "doc": "docs"
@@ -27,6 +26,7 @@
     "oas"
   ],
   "devDependencies": {
-    "@redocly/cli": "^1.0.0-beta.118"
+    "@redocly/cli": "^1.0.0-beta.118",
+    "http-server": "^14.1.1"
   }
 }

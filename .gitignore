@@ -6,7 +6,7 @@
 
 
 # Build / generate output
-dist/
+openapi.yaml
 
 # Dependency directories
 node_modules/
