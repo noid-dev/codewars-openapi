@@ -87,6 +87,7 @@ paths:
     get:
       summary: List challenges authored by the user.
       operationId: listAuthoredChallenges
+      description: Returns a list of all code challenges authored by the user.
       tags:
         - Users
       parameters:
