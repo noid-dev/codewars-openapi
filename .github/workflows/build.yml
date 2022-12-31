@@ -52,5 +52,7 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add -A
-          git commit -m "$(git log -1 --format=%B)"
-          git push -f origin gh-pages
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "$(git log -1 --format=%B)"
+            git push -f origin gh-pages
+          fi
