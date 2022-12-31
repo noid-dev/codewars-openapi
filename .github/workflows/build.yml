@@ -53,7 +53,7 @@ jobs:
           git config user.email github-actions@github.com
           git add -A
           if ! git diff-index --quiet HEAD; then
-            git commit -m "chore: sync-up triggered by $GITHUB_SHA"
+            git commit -m "chore: sync-up triggered by run #$GITHUB_RUN_NUMBER" -m "SHA: $GITHUB_SHA"
             git push -f origin gh-pages
             echo '☑️ GitHub Pages have been updated.' >> $GITHUB_STEP_SUMMARY
           else
