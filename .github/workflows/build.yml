@@ -1,6 +1,9 @@
 name: Build Codewars OAS
 
-on: [ push, pull_request ]
+on:
+  push:
+    branches:
+      - wip
 
 jobs:
   build:
@@ -24,8 +27,30 @@ jobs:
       - name: Validate definitions
         run: npm test
 
-      - name: Upload OAS
+      - name: Upload gh-pages artifacts
         uses: actions/upload-artifact@83fd05a356d7e2593de66fc9913b3002723633cb
         with:
-          name: codewars-openapi
-          path: ./public/codewars.yaml
+          name: gh-pages
+          path: ./public/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+        with:
+          ref: gh-pages
+
+      - name: Download gh-pages artifacts
+        uses: actions/download-artifact@9782bd6a9848b53b110e712e20e42d89988822b7
+        with:
+          name: gh-pages
+
+      - name: Update Git pages
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -A
+          git commit -m "$(git log -1 --format=%B)"
+          git push -f origin gh-pages
