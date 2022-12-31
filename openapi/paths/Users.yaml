@@ -1,8 +1,7 @@
 get:
-  summary: Returns user information.
+  summary: Get user information.
   operationId: getUser
-  description: |
-    Some description here
+  description: Returns information about the user.
   tags:
     - Users
   parameters:
