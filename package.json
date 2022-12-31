@@ -1,0 +1,32 @@
+{
+  "name": "codewars-openapi",
+  "version": "1.0.0",
+  "description": "Codewars OpenAPI Specification",
+  "homepage": "https://github.com/noid-dev/codewars-openapi#readme",
+  "license": "MIT",
+  "author": "Paranoid User",
+  "scripts": {
+    "build": "redocly bundle openapi/openapi.yaml -o codewars.yaml",
+    "stats": "redocly stats codewars.yaml",
+    "lint": "redocly lint codewars.yaml",
+    "start": "redocly preview-docs codewars.yaml"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noid-dev/codewars-openapi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/noid-dev/codewars-openapi/issues"
+  },
+  "keywords": [
+    "codewars",
+    "openapi",
+    "oas"
+  ],
+  "devDependencies": {
+    "@redocly/cli": "^1.0.0-beta.118"
+  }
+}

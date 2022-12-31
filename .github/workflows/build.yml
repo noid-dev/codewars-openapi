@@ -1,6 +1,6 @@
 name: Build Codewars OAS
 
-on: [ push ]
+on: [ push, pull_request ]
 
 jobs:
   build:
@@ -13,30 +13,22 @@ jobs:
         uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516
         with:
           node-version: 18
+          cache: npm
 
-      - name: Bundle OpenAPI definitions
-        run: npx @redocly/cli@1.0.0-beta.118 bundle openapi/openapi.yaml --output=codewars.yaml
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Bundle definitions
+        run: npm run build
 
       - name: Publish summary
-        run: npx @redocly/cli@1.0.0-beta.118 stats codewars.yaml >> $GITHUB_STEP_SUMMARY 2>&1
+        run: npm run stats >> $GITHUB_STEP_SUMMARY 2>&1
+
+      - name: Lint definitions
+        run: npx run lint
 
       - name: Upload OAS
         uses: actions/upload-artifact@83fd05a356d7e2593de66fc9913b3002723633cb
         with:
           name: codewars-openapi
           path: codewars.yaml
-
-  scan:
-    needs: build
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Download OAS
-        uses: actions/download-artifact@9782bd6a9848b53b110e712e20e42d89988822b7
-        with:
-          name: codewars-openapi
-
-      - name: Display structure of downloaded files
-        run: ls -R
-
-      - name: Lint OpenAPI definitions
-        run: npx @redocly/cli@1.0.0-beta.118 lint codewars.yaml
