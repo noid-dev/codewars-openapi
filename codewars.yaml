@@ -122,8 +122,9 @@ paths:
           $ref: '#/components/responses/ServiceUnavailable'
   /api/v1/code-challenges/{challenge}:
     get:
-      summary: Return code challenge information.
+      summary: Get code challenge information.
       operationId: getCodeChallenge
+      description: Returns information about the code challenge.
       tags:
         - Code Challenges
       parameters:
