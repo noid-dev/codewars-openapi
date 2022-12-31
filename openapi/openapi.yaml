@@ -7,7 +7,8 @@ info:
   license:
     name: MIT
     url: https://github.com/noid-dev/codewars-openapi/blob/main/LICENSE.md
-  description: Codewars API documentation - [https://dev.codewars.com](https://dev.codewars.com)
+  description: >
+    Codewars API documentation - [https://dev.codewars.com](https://dev.codewars.com)
 servers:
   - url: https://www.codewars.com
 security: [ ]
