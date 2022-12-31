@@ -6,7 +6,7 @@
   "license": "MIT",
   "author": "Paranoid User",
   "scripts": {
-    "build": "redocly bundle openapi/openapi.yaml -o public/codewars.yaml & redocly stats public/codewars.yaml",
+    "build": "redocly bundle openapi/openapi.yaml -o public/codewars.yaml",
     "test": "redocly lint public/codewars.yaml",
     "start": "http-server --cors"
   },
