@@ -18,7 +18,7 @@ jobs:
         run: npx @redocly/cli@1.0.0-beta.118 bundle openapi/openapi.yaml --output=codewars.yaml
 
       - name: Publish summary
-        run: npx @redocly/cli@1.0.0-beta.118 stats codewars.yaml >> $GITHUB_STEP_SUMMARY
+        run: npx @redocly/cli@1.0.0-beta.118 stats codewars.yaml >> $GITHUB_STEP_SUMMARY 2>&1
 
       - name: Upload OAS
         uses: actions/upload-artifact@83fd05a356d7e2593de66fc9913b3002723633cb
