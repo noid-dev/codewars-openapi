@@ -37,6 +37,7 @@ properties:
     description: Date and time when the kata was created.
   publishedAt:
     type: string
+    nullable: true
     description: Date and time when the kata was first published.
   approvedBy:
     # nullable: true
