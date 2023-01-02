@@ -16,9 +16,8 @@ properties:
     type: string
     description: Name of the clan.
   leaderboardPosition:
-    type: integer
+    type: [ integer, "null" ]
     description: The user's position on the overall leaderboard.
-    nullable: true
   skills:
     type: array
     description: Array of skills entered by the user.
