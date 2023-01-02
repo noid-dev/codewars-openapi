@@ -34,8 +34,6 @@ paths:
                   $ref: '#/components/examples/UserExample'
         '400':
           $ref: '#/components/responses/BadRequest'
-        '403':
-          $ref: '#/components/responses/Forbidden'
         '404':
           $ref: '#/components/responses/NotFound'
         '405':
@@ -71,8 +69,6 @@ paths:
                   $ref: '#/components/examples/CompletedChallengesExample'
         '400':
           $ref: '#/components/responses/BadRequest'
-        '403':
-          $ref: '#/components/responses/Forbidden'
         '404':
           $ref: '#/components/responses/NotFound'
         '405':
@@ -106,8 +102,6 @@ paths:
                   $ref: '#/components/examples/AuthoredChallengesExample'
         '400':
           $ref: '#/components/responses/BadRequest'
-        '403':
-          $ref: '#/components/responses/Forbidden'
         '404':
           $ref: '#/components/responses/NotFound'
         '405':
@@ -141,8 +135,6 @@ paths:
                   $ref: '#/components/examples/CodeChallengeExample'
         '400':
           $ref: '#/components/responses/BadRequest'
-        '403':
-          $ref: '#/components/responses/Forbidden'
         '404':
           $ref: '#/components/responses/NotFound'
         '405':
@@ -579,15 +571,6 @@ components:
   responses:
     BadRequest:
       description: Something went wrong.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
-          examples:
-            error:
-              $ref: '#/components/examples/ErrorExample'
-    Forbidden:
-      description: You do not have permission to access this resource.
       content:
         application/json:
           schema:
