@@ -29,7 +29,7 @@ jobs:
           git config user.email github-actions@github.com
           git add -A
           if ! git diff-index --quiet HEAD; then
-            git commit -m "${{ github.event.head_commit.message || chore: sync-up github pages (run #$GITHUB_RUN_NUMBER) }}"
+            git commit -m "${{ github.event.head_commit.message || 'chore: sync-up github pages (run #$GITHUB_RUN_NUMBER)' }}"
             git push -f origin gh-pages
             echo '☑️ GitHub Pages have been updated.' >> $GITHUB_STEP_SUMMARY
           else
