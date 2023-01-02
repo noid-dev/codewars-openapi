@@ -1,6 +1,5 @@
 type: object
 description: Object describing the rank of the kata if approved.
-nullable: true
 properties:
   id:
     type: integer
