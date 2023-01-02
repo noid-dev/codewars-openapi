@@ -19,10 +19,8 @@ jobs:
           ref: gh-pages
 
       - name: Download artifacts
-        uses: dawidd6/action-download-artifact@e6e25ac3a2b93187502a8be1ef9e9603afc34925
+        uses: actions/download-artifact@9782bd6a9848b53b110e712e20e42d89988822b7
         with:
-          search_artifacts: true
-          workflow_conclusion: success
           name: gh-pages
 
       - name: Update Git pages
