@@ -1,4 +1,9 @@
 type: object
+required:
+  - rank
+  - name
+  - color
+  - score
 description: Overall rank.
 properties:
   rank:
