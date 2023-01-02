@@ -1,9 +1,15 @@
-name: Update GitHub Pages
+name: Publish GitHub Pages
 
-on: workflow_call
+on:
+  push:
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
+  workflow_dispatch:
 
 jobs:
-  deploy:
+  build:
+    uses: noid-dev/codewars-openapi/.github/workflows/build.yaml@main
+  publish:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout gh-pages branch
@@ -14,7 +20,7 @@ jobs:
       - name: Download artifacts
         uses: dawidd6/action-download-artifact@e6e25ac3a2b93187502a8be1ef9e9603afc34925
         with:
-          workflow: release.yaml
+          workflow: publish.yaml
           workflow_conclusion: success
           name: gh-pages
 
