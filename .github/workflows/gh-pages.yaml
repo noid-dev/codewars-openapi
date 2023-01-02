@@ -1,0 +1,31 @@
+name: Update GitHub Pages
+
+on: workflow_call
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+        with:
+          ref: gh-pages
+
+      - name: Download artifacts
+        uses: dawidd6/action-download-artifact@e6e25ac3a2b93187502a8be1ef9e9603afc34925
+        with:
+          workflow: build.yaml
+          name: gh-pages
+
+      - name: Update Git pages
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -A
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "${{ github.event.head_commit.message }}"
+            git push -f origin gh-pages
+            echo '☑️ GitHub Pages have been updated.' >> $GITHUB_STEP_SUMMARY
+          else
+            echo '✅ GitHub Pages are already up-to-date.' >> $GITHUB_STEP_SUMMARY
+          fi

@@ -1,0 +1,14 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: noid-dev/codewars-openapi/.github/workflows/build.yaml@main
+  update-pages:
+    needs: build
+    uses: noid-dev/codewars-openapi/.github/workflows/gh-pages.yaml@main
