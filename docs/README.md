@@ -2,7 +2,7 @@
 
 [![download](https://img.shields.io/badge/download-OAS3-blue.svg)](https://noid.dev/codewars-openapi/codewars.yaml)
 [![preview](https://img.shields.io/badge/preview-OAS3-blue.svg)](https://noid.dev/codewars-openapi)
-[![build](https://img.shields.io/github/actions/workflow/status/noid-dev/codewars-openapi/build.yml)](https://github.com/noid-dev/codewars-openapi/actions/workflows/build.yml)
+[![build](https://img.shields.io/github/actions/workflow/status/noid-dev/codewars-openapi/ci.yaml)](https://github.com/noid-dev/codewars-openapi/actions/workflows/ci.yaml)
 [![hits](https://img.shields.io/badge/dynamic/xml?color=success&label=hits&query=//*[name()=%27text%27][3]&url=https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnoid-dev%2Fcodewars-openapi)](https://hits.seeyoufarm.com/api/count/graph/dailyhits.svg?url=https://github.com/noid-dev/codewars-openapi)
 [![chat](https://img.shields.io/gitter/room/noid-dev/community?color=49c39e)](https://gitter.im/noid-dev/community)
 
