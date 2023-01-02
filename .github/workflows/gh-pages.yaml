@@ -14,9 +14,9 @@ jobs:
       - name: Download artifacts
         uses: dawidd6/action-download-artifact@e6e25ac3a2b93187502a8be1ef9e9603afc34925
         with:
-          name: gh-pages
-          search_artifacts: true
+          workflow: release.yaml
           workflow_conclusion: success
+          name: gh-pages
 
       - name: Update Git pages
         run: |
