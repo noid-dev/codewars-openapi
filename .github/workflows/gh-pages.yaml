@@ -16,6 +16,7 @@ jobs:
         with:
           name: gh-pages
           search_artifacts: true
+          workflow_conclusion: success
 
       - name: Update Git pages
         run: |
