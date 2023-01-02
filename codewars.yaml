@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  version: 1.0.0
+  version: 0.1.0
   title: Codewars API
   contact:
     url: https://github.com/noid-dev/codewars-openapi
@@ -173,6 +173,11 @@ components:
   schemas:
     UserRank:
       type: object
+      required:
+        - rank
+        - name
+        - color
+        - score
       description: Overall rank.
       properties:
         rank:
@@ -196,6 +201,9 @@ components:
         $ref: '#/components/schemas/UserRank'
     UserRanks:
       type: object
+      required:
+        - overall
+        - languages
       description: Ranks object with overall and language ranks.
       properties:
         overall:
@@ -204,6 +212,9 @@ components:
           $ref: '#/components/schemas/LanguageRank'
     UserStatistics:
       type: object
+      required:
+        - totalAuthored
+        - totalCompleted
       description: |
         Object with fields totalAuthored and totalCompleted for the number 
         of authored and completed kata respectively.
@@ -216,6 +227,12 @@ components:
           description: The total number of completed kata.
     User:
       type: object
+      required:
+        - id
+        - username
+        - honor
+        - ranks
+        - codeChallenges
       properties:
         id:
           type: string
