@@ -233,19 +233,22 @@ components:
           description: Username of the user.
         name:
           type: string
+          nullable: true
           description: Name of the user.
         honor:
           type: integer
           description: Total honor points earned by the user.
         clan:
           type: string
+          nullable: true
           description: Name of the clan.
         leaderboardPosition:
           type: integer
-          description: The user's position on the overall leaderboard.
           nullable: true
+          description: The user's position on the overall leaderboard.
         skills:
           type: array
+          nullable: true
           description: Array of skills entered by the user.
           items:
             type: string
@@ -336,16 +339,18 @@ components:
     CodeChallengeRank:
       type: object
       description: Object describing the rank of the kata if approved.
-      nullable: true
       properties:
         id:
           type: integer
+          nullable: true
           description: Rank in integer. [-8, -1] maps to kyu, [1, 8] maps to dan.
         name:
           type: string
+          nullable: true
           description: Either {-rank} kyu or {rank} dan.
         color:
           type: string
+          nullable: true
           description: |
             The color of the rank. Possible colors are white (7-8 kyu), yellow (5-6 kyu), 
             blue (3-4 kyu), purple (1-2 kyu), black (1-4 dan), and red (5-8 dan).
@@ -409,6 +414,7 @@ components:
           description: Date and time when the kata was created.
         publishedAt:
           type: string
+          nullable: true
           description: Date and time when the kata was first published.
         approvedBy:
           $ref: '#/components/schemas/CodeChallengeContributor'
