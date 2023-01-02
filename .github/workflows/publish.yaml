@@ -10,6 +10,7 @@ jobs:
   build:
     uses: noid-dev/codewars-openapi/.github/workflows/build.yaml@main
   publish:
+    needs: build
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout gh-pages branch
@@ -20,7 +21,7 @@ jobs:
       - name: Download artifacts
         uses: dawidd6/action-download-artifact@e6e25ac3a2b93187502a8be1ef9e9603afc34925
         with:
-          workflow: publish.yaml
+          search_artifacts: true
           workflow_conclusion: success
           name: gh-pages
 
