@@ -1,4 +1,8 @@
 type: object
+required:
+  - totalPages
+  - totalItems
+  - data
 properties:
   totalPages:
     type: integer
