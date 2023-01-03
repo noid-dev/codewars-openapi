@@ -1,7 +1,6 @@
 type: object
 required:
   - overall
-  - languages
 description: Ranks object with overall and language ranks.
 properties:
   overall:
