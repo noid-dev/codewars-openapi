@@ -1,4 +1,7 @@
 type: object
+required:
+  - success
+  - reason
 properties:
   success:
     type: boolean
