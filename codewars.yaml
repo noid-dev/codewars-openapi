@@ -203,7 +203,6 @@ components:
       type: object
       required:
         - overall
-        - languages
       description: Ranks object with overall and language ranks.
       properties:
         overall:
@@ -267,6 +266,9 @@ components:
           $ref: '#/components/schemas/UserStatistics'
     Error:
       type: object
+      required:
+        - success
+        - reason
       properties:
         success:
           type: boolean
@@ -276,6 +278,12 @@ components:
           description: Reason for the outcome.
     CompletedChallenge:
       type: object
+      required:
+        - id
+        - name
+        - slug
+        - completedAt
+        - completedLanguages
       properties:
         id:
           type: string
@@ -296,6 +304,10 @@ components:
             type: string
     CompletedChallenges:
       type: object
+      required:
+        - totalPages
+        - totalItems
+        - data
       properties:
         totalPages:
           type: integer
@@ -310,6 +322,12 @@ components:
             $ref: '#/components/schemas/CompletedChallenge'
     AuthoredChallenge:
       type: object
+      required:
+        - id
+        - name
+        - description
+        - tags
+        - languages
       properties:
         id:
           type: string
@@ -340,6 +358,8 @@ components:
             type: string
     AuthoredChallenges:
       type: object
+      required:
+        - data
       properties:
         data:
           type: array
@@ -365,6 +385,9 @@ components:
             blue (3-4 kyu), purple (1-2 kyu), black (1-4 dan), and red (5-8 dan).
     CodeChallengeContributor:
       type: object
+      required:
+        - username
+        - url
       description: The author of the kata.
       properties:
         username:
@@ -375,6 +398,9 @@ components:
           description: URL of the user's profile.
     CodeChallengeStatistics:
       type: object
+      required:
+        - issues
+        - suggestions
       description: Object with fields issues and suggestions.
       properties:
         issues:
@@ -385,6 +411,23 @@ components:
           description: The number of suggestions.
     CodeChallenge:
       type: object
+      required:
+        - id
+        - name
+        - slug
+        - category
+        - description
+        - tags
+        - languages
+        - rank
+        - createdBy
+        - createdAt
+        - totalCompleted
+        - totalAttempts
+        - totalStars
+        - voteScore
+        - contributorsWanted
+        - unresolved
       properties:
         id:
           type: string
@@ -429,6 +472,7 @@ components:
           $ref: '#/components/schemas/CodeChallengeContributor'
         approvedAt:
           type: string
+          nullable: true
           description: Date and time when the kata was approved.
         totalCompleted:
           type: integer
