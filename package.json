@@ -26,7 +26,7 @@
     "oas"
   ],
   "devDependencies": {
-    "@redocly/cli": "^1.0.0-beta.120",
+    "@redocly/cli": "^1.0.0-beta.121",
     "http-server": "^14.1.1"
   }
 }
