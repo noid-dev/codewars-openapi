@@ -4,5 +4,6 @@ required:
 properties:
   data:
     type: array
+    description: Array of authored challenges.
     items:
       $ref: ./AuthoredChallenge.yaml
