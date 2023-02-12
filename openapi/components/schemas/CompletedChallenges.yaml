@@ -12,6 +12,6 @@ properties:
     description: Total number of completed challenges.
   data:
     type: array
-    description: Arrays of completed challenges.
+    description: Array of completed challenges.
     items:
       $ref: ./CompletedChallenge.yaml
