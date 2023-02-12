@@ -1,4 +1,4 @@
-description: Something went wrong.
+description: Issued HTTP request is malformed or illegal.
 content:
   application/json:
     schema:

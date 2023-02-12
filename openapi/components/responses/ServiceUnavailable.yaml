@@ -1,4 +1,4 @@
-description: We're temporarily offline for maintenance. Please try again later.
+description: Codewars is temporarily offline for maintenance. Please try again later.
 content:
   application/json:
     schema:

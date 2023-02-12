@@ -1,4 +1,4 @@
-description: You're making too many API requests.
+description: Too many API calls.
 content:
   application/json:
     schema:
