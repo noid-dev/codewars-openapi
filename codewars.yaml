@@ -317,7 +317,7 @@ components:
           description: Total number of completed challenges.
         data:
           type: array
-          description: Arrays of completed challenges.
+          description: Array of completed challenges.
           items:
             $ref: '#/components/schemas/CompletedChallenge'
     AuthoredChallenge:
@@ -363,6 +363,7 @@ components:
       properties:
         data:
           type: array
+          description: Array of authored challenges.
           items:
             $ref: '#/components/schemas/AuthoredChallenge'
     CodeChallengeRank:
@@ -631,7 +632,7 @@ components:
           suggestions: 0
   responses:
     BadRequest:
-      description: Something went wrong.
+      description: Issued HTTP request is malformed or illegal.
       content:
         application/json:
           schema:
@@ -640,7 +641,7 @@ components:
             error:
               $ref: '#/components/examples/ErrorExample'
     NotFound:
-      description: The specified resource could not be found
+      description: Resource could not be found.
       content:
         application/json:
           schema:
@@ -649,7 +650,7 @@ components:
             error:
               $ref: '#/components/examples/ErrorExample'
     MethodNotAllowed:
-      description: You tried to access a resource with an invalid method.
+      description: Attempted to access a resource with an invalid HTTP method.
       content:
         application/json:
           schema:
@@ -658,7 +659,7 @@ components:
             error:
               $ref: '#/components/examples/ErrorExample'
     NotAcceptable:
-      description: You requested a format that isn't JSON.
+      description: Requested content format is not JSON.
       content:
         application/json:
           schema:
@@ -667,7 +668,7 @@ components:
             error:
               $ref: '#/components/examples/ErrorExample'
     TooManyRequests:
-      description: You're making too many API requests.
+      description: Too many API calls.
       content:
         application/json:
           schema:
@@ -676,7 +677,7 @@ components:
             error:
               $ref: '#/components/examples/ErrorExample'
     InternalServerError:
-      description: We had a problem with our server. Try again later.
+      description: There is a problem with Codewars. Please try again later.
       content:
         application/json:
           schema:
@@ -685,7 +686,7 @@ components:
             error:
               $ref: '#/components/examples/ErrorExample'
     ServiceUnavailable:
-      description: We're temporarily offline for maintenance. Please try again later.
+      description: Codewars is temporarily offline for maintenance. Please try again later.
       content:
         application/json:
           schema:
