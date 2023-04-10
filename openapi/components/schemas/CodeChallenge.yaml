@@ -1,4 +1,21 @@
 type: object
+required:
+  - id
+  - name
+  - slug
+  - category
+  - description
+  - tags
+  - languages
+  - rank
+  - createdBy
+  - createdAt
+  - totalCompleted
+  - totalAttempts
+  - totalStars
+  - voteScore
+  - contributorsWanted
+  - unresolved
 properties:
   id:
     type: string
@@ -36,14 +53,14 @@ properties:
     type: string
     description: Date and time when the kata was created.
   publishedAt:
-    type: string
+    type: [ string, "null" ]
     description: Date and time when the kata was first published.
   approvedBy:
     # nullable: true
     # description: The approver of the kata.
     $ref: ./CodeChallengeContributor.yaml
   approvedAt:
-    type: string
+    type: [ string, "null" ]
     description: Date and time when the kata was approved.
   totalCompleted:
     type: integer

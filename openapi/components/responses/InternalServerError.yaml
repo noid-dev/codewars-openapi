@@ -1,4 +1,4 @@
-description: We had a problem with our server. Try again later.
+description: There is a problem with Codewars. Please try again later.
 content:
   application/json:
     schema:

@@ -1,4 +1,8 @@
 type: object
+required:
+  - totalPages
+  - totalItems
+  - data
 properties:
   totalPages:
     type: integer
@@ -8,6 +12,6 @@ properties:
     description: Total number of completed challenges.
   data:
     type: array
-    description: Arrays of completed challenges.
+    description: Array of completed challenges.
     items:
       $ref: ./CompletedChallenge.yaml

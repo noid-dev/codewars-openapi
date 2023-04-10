@@ -1,4 +1,7 @@
 type: object
+required:
+  - username
+  - url
 description: The author of the kata.
 properties:
   username:

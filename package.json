@@ -1,6 +1,6 @@
 {
   "name": "codewars-openapi",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Codewars OpenAPI Specification",
   "homepage": "https://github.com/noid-dev/codewars-openapi#readme",
   "license": "MIT",
@@ -26,7 +26,7 @@
     "oas"
   ],
   "devDependencies": {
-    "@redocly/cli": "^1.0.0-beta.118",
+    "@redocly/cli": "^1.0.0-beta.125",
     "http-server": "^14.1.1"
   }
 }

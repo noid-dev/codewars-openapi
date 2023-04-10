@@ -1,4 +1,4 @@
-description: You requested a format that isn't JSON.
+description: Requested content format is not JSON.
 content:
   application/json:
     schema:

@@ -1,4 +1,4 @@
-description: You tried to access a resource with an invalid method.
+description: Attempted to access a resource with an invalid HTTP method.
 content:
   application/json:
     schema:
