@@ -13,23 +13,19 @@ properties:
     type: string
     description: Username of the user.
   name:
-    type: string
-    nullable: true
+    type: [ string, "null" ]
     description: Name of the user.
   honor:
     type: integer
     description: Total honor points earned by the user.
   clan:
-    type: string
-    nullable: true
+    type: [ string, "null" ]
     description: Name of the clan.
   leaderboardPosition:
-    type: integer
-    nullable: true
+    type: [ integer, "null" ]
     description: The user's position on the overall leaderboard.
   skills:
-    type: array
-    nullable: true
+    type: [ array, "null" ]
     description: Array of skills entered by the user.
     items:
       type: string
