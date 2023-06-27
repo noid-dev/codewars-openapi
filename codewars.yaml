@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.1.0
 info:
-  version: 0.1.0
+  version: 0.2.0
   title: Codewars API
   contact:
     url: https://github.com/noid-dev/codewars-openapi
@@ -240,23 +240,27 @@ components:
           type: string
           description: Username of the user.
         name:
-          type: string
-          nullable: true
+          type:
+            - string
+            - 'null'
           description: Name of the user.
         honor:
           type: integer
           description: Total honor points earned by the user.
         clan:
-          type: string
-          nullable: true
+          type:
+            - string
+            - 'null'
           description: Name of the clan.
         leaderboardPosition:
-          type: integer
-          nullable: true
+          type:
+            - integer
+            - 'null'
           description: The user's position on the overall leaderboard.
         skills:
-          type: array
-          nullable: true
+          type:
+            - array
+            - 'null'
           description: Array of skills entered by the user.
           items:
             type: string
@@ -339,13 +343,15 @@ components:
           type: string
           description: Description of the kata in Markdown.
         rank:
-          type: integer
+          type:
+            - integer
+            - 'null'
           description: Rank of the kata if approved.
-          nullable: true
         rankName:
-          type: string
+          type:
+            - string
+            - 'null'
           description: Rank name of the kata if approved.
-          nullable: true
         tags:
           type: array
           description: Array of tags associated with the kata.
@@ -371,16 +377,19 @@ components:
       description: Object describing the rank of the kata if approved.
       properties:
         id:
-          type: integer
-          nullable: true
+          type:
+            - integer
+            - 'null'
           description: Rank in integer. [-8, -1] maps to kyu, [1, 8] maps to dan.
         name:
-          type: string
-          nullable: true
+          type:
+            - string
+            - 'null'
           description: Either {-rank} kyu or {rank} dan.
         color:
-          type: string
-          nullable: true
+          type:
+            - string
+            - 'null'
           description: |
             The color of the rank. Possible colors are white (7-8 kyu), yellow (5-6 kyu), 
             blue (3-4 kyu), purple (1-2 kyu), black (1-4 dan), and red (5-8 dan).
@@ -466,14 +475,16 @@ components:
           type: string
           description: Date and time when the kata was created.
         publishedAt:
-          type: string
-          nullable: true
+          type:
+            - string
+            - 'null'
           description: Date and time when the kata was first published.
         approvedBy:
           $ref: '#/components/schemas/CodeChallengeContributor'
         approvedAt:
-          type: string
-          nullable: true
+          type:
+            - string
+            - 'null'
           description: Date and time when the kata was approved.
         totalCompleted:
           type: integer
