@@ -19,7 +19,7 @@ jobs:
         run: npm ci
 
       - name: Bundle definitions
-        run: npm run build >> $GITHUB_STEP_SUMMARY 2>&1
+        run: npm run build
 
       - name: Validate definitions
         run: npm test
