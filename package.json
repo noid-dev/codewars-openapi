@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "css-loader": "^6.9.0",
-    "style-loader": "^3.3.3",
+    "style-loader": "^3.3.4",
     "swagger-ui": "^5.11.0"
   }
 }
