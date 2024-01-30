@@ -34,6 +34,6 @@
   "dependencies": {
     "css-loader": "^6.9.1",
     "style-loader": "^3.3.4",
-    "swagger-ui": "^5.11.1"
+    "swagger-ui": "^5.11.2"
   }
 }
