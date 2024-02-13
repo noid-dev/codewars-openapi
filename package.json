@@ -29,7 +29,7 @@
     "@redocly/cli": "^1.8.2",
     "webpack": "^5.90.1",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "webpack-dev-server": "^5.0.0"
   },
   "dependencies": {
     "css-loader": "^6.10.0",
