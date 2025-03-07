@@ -1,4 +1,4 @@
-# Codewars OpenAPI Specification
+@
 
 [![download](https://img.shields.io/badge/download-OAS3-blue.svg)](https://noid.dev/codewars-openapi/codewars.yaml)
 [![preview](https://img.shields.io/badge/preview-OAS3-blue.svg)](https://noid.dev/codewars-openapi)
