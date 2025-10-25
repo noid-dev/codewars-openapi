@@ -26,7 +26,7 @@
     "oas"
   ],
   "devDependencies": {
-    "@redocly/cli": "^2.5.0",
+    "@redocly/cli": "^2.8.0",
     "yaml": "^2.8.1",
     "webpack": "^5.102.1",
     "webpack-cli": "^6.0.1",
@@ -35,6 +35,6 @@
   "dependencies": {
     "css-loader": "^7.1.2",
     "style-loader": "^4.0.0",
-    "swagger-ui": "^5.29.4"
+    "swagger-ui": "^5.29.5"
   }
 }
