@@ -27,7 +27,7 @@
   ],
   "devDependencies": {
     "@redocly/cli": "^2.24.1",
-    "yaml": "^2.8.2",
+    "yaml": "^2.8.3",
     "webpack": "^5.105.4",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.3"
