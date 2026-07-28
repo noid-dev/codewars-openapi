@@ -26,7 +26,7 @@
     "oas"
   ],
   "devDependencies": {
-    "@redocly/cli": "^2.40.0",
+    "@redocly/cli": "^2.41.0",
     "yaml": "^2.9.0",
     "webpack": "^5.109.1",
     "webpack-cli": "^6.0.1",
